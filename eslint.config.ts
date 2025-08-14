@@ -11,6 +11,10 @@ export default defineConfigWithVueTs(
   {
     name: 'app/files-to-lint',
     files: ['**/*.{ts,mts,tsx,vue}'],
+    rules: {
+      quotes: ['error', 'single'], // บังคับใช้ single quotes
+      semi: ['error', 'never'],    // ไม่ใช้ semicolon (ถ้าอยากใช้ก็เป็น 'always')
+    },
   },
 
   globalIgnores(['**/dist/**', '**/dist-ssr/**', '**/coverage/**']),
