@@ -1,7 +1,6 @@
 <script setup>
 import { reactive, ref } from 'vue'
 
-
 const countA = 0;
 console.log('countA: ', countA);
 
