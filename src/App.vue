@@ -12,6 +12,7 @@ import TemplateSyntax from './components/TemplateSyntax.vue';
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/template-syntax">Template Syntax</RouterLink>
         <RouterLink to="/reactivity-fundamentals">Reactivity Fundamentals</RouterLink>
+        <RouterLink to="/computed-properties">Computed Properties</RouterLink>
       </nav>
     </div>
   </header>

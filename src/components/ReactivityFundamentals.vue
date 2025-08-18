@@ -1,25 +1,25 @@
 <script setup>
 import { reactive, ref } from 'vue'
 
-const countA = 0;
-console.log('countA: ', countA);
+const countA = 0
+console.log('countA: ', countA)
 
 // ใช้ ref() เหมาะกับค่าพื้นฐาน (number, string, boolean) หรือ object/array เล็ก ๆ
-const countB = ref(0);
-console.log('countB: ', countB);
+const countB = ref(0)
+console.log('countB: ', countB)
 function increment() {
     countB.value++
-    console.log('countB.value', countB.value);
+    console.log('countB.value', countB.value)
 }
 
 const obj = ref({
     num: { count: 0 },
     arr: ['A', 'B']
-});
+})
 
 function manageObject() {
     obj.value.num.count++;
-    obj.value.arr.push('C');
+    obj.value.arr.push('C')
 }
 
 
@@ -37,7 +37,7 @@ const book = reactive({
         { user: 'Alice', rating: 5, comment: 'Must-read for developers!' },
         { user: 'Bob', rating: 4, comment: 'Great but a bit long.' }
     ]
-});
+})
 
 function addReview(user, rating, comment) {
     book.reviews.push({ user, rating, comment })
@@ -65,13 +65,13 @@ function sellOne() {
 //             { user: 'Alice', rating: 5, comment: 'Must-read for developers!' },
 //             { user: 'Bob', rating: 4, comment: 'Great but a bit long.' }
 //         ]
-//     };
+//     }
 // }
 
-// const book = reactive(craeteBook());
+// const book = reactive(craeteBook())
 
 // function reset() {
-//     Object.assign(book, craeteBook());
+//     Object.assign(book, craeteBook())
 // }
 
 </script>
