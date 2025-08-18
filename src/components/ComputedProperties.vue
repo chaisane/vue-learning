@@ -13,13 +13,13 @@ const author = reactive({
 })
 
 // a computed ref
-const publishedBooksMessage = computed(() => {
-    console.log('publishedBooksMessage (computed): ' + (author.books.length))
+const checkBooksByComputed = computed(() => {
+    console.log('CheckBooksBy"Computed", length: ', (author.books.length))
     return author.books.length % 2 === 0 ? 'Even' : 'Odd'
 })
 
-function getBooksMessage() {
-    console.log('getBooksMessage (method): ' + (author.books.length))
+function checkBooksByMethod() {
+    console.log('CheckBooksBy"Method" length: ' + (author.books.length))
     return author.books.length % 2 === 0 ? 'Even' : 'Odd'
 }
 
@@ -31,10 +31,10 @@ function addBook() {
 
 <template>
     <!-- Computed Caching vs. Methods -->
-    <p>Has published books: {{ author.books.length }}</p>
-    <span>publishedBooksMessage#1 (computed): {{ publishedBooksMessage }}</span><br>
-    <span>publishedBooksMessage#2 (computed): {{ publishedBooksMessage }}</span><br>
-    <span>getBooksMessage#1 (method): {{ getBooksMessage() }}</span><br>
-    <span>getBooksMessage#2 (method): {{ getBooksMessage() }}</span><br>
+    <p>Has books: {{ author.books.length }}</p>
+    <span>CheckBooksBy"Computed"#1: {{ checkBooksByComputed }}</span><br>
+    <span>CheckBooksBy"Computed"#2: {{ checkBooksByComputed }}</span><br>
+    <span>CheckBooksBy"Method"#1: {{ checkBooksByMethod() }}</span><br>
+    <span>CheckBooksBy"Method"#2 {{ checkBooksByMethod() }}</span><br>
     <button @click="addBook">Add Book</button>
 </template>
