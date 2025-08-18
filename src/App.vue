@@ -11,6 +11,7 @@ import TemplateSyntax from './components/TemplateSyntax.vue';
       <nav class="navbar navbar-expand-sm bg-light navbar-light">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/template-syntax">Template Syntax</RouterLink>
+        <RouterLink to="/reactivity-fundamentals">Reactivity Fundamentals</RouterLink>
       </nav>
     </div>
   </header>
