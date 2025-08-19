@@ -13,6 +13,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/reactivity-fundamentals">Reactivity Fundamentals</RouterLink>
         <RouterLink to="/computed-properties">Computed Properties</RouterLink>
         <RouterLink to="/class-and-style-bindings">Class and Style Bindings</RouterLink>
+        <RouterLink to="/conditional-rendering">Conditional Rendering</RouterLink>
       </nav>
     </div>
   </header>
