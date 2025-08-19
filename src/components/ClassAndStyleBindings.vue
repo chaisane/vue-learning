@@ -1,28 +1,59 @@
 <script setup lang="ts">
-import { computed, reactive, ref, vModelCheckbox } from 'vue';
+import { computed, reactive, ref } from 'vue';
 
-const isActive = ref(false)
+// Binding to Objects
+const isActive = ref(true)
 const hasError = ref(false)
-const message = ref(null)
+const error = ref('error')
 
+const classObject = reactive({
+    active: true,
+    'text-danger': false
+})
 
+const classObject1 = computed(() => ({
+    active: isActive.value,
+    'text-danger': error.value,
+    'text-success': !error.value,
+}))
+
+// Binding to Arrays
+const activeClass = ref('active')
+const errorClass = ref('text-danger')
+const successClass = ref('text-success')
+const isError = ref(false)
+
+// Binding to Objects
+const activeColor = ref('blue')
+const fontSize = ref(30)
+
+// Binding to Objects
+const styleObject = reactive({
+    color: 'blue',
+    fontSize: '30px'
+})
+
+const baseStyles = ref('color:green;')
+const overridingStyles = ref('font-size: 30px;')
 </script>
 
 <template>
-    isActive
-    <input type="checkbox" v-model="isActive" >OK</input>
-    <button @click="isActive = true">True</button>
-    <button @click="isActive = false">False</button><br>
-    hasError
-    <button @click="hasError = true">True</button>
-    <button @click="hasError = false">False</button>
-    <div v-if="isActive">
-        <span v-if="!hasError" class="text-success">Message Success</span>
-        <span v-if="hasError" class="text-danger">Message Error</span>
+    <!-- Binding HTML Classes -->
+    <div class="col-12 card h-100 card-body">
+        <div class="static" :class="{ active: isActive, 'text-danger': hasError }">Binding Class inline</div>
+        <div :class="classObject">Binding Class object</div>
+        <div :class="classObject1">Binding Class computed {{ error ? error : 'success!!!' }}</div>
     </div>
-
-    <div class="static" :class="{ 'd-none': isActive, 'text-danger': hasError, 'text-success': !hasError }">Message {{
-        message }}</div>
+    <div class="col-12 card h-100 card-body">
+        <div :class="[activeClass, errorClass]">Binding Class Arrays</div>
+        <div :class="[isActive ? activeClass : '', errorClass]">Binding Class Arrays Expression</div>
+        <div :class="[{ [activeClass]: isActive }, { [errorClass]: isError }, { [successClass]: !isError }]">Binding
+            Class Arrays Object Syntax</div>
+    </div>
+    <!-- Binding Styles -->
+    <div class="col-12 card h-100 card-body">
+        <div :style="{ color: activeColor, fontSize: fontSize + 'px' }">Binding Inline Styles</div>
+        <div :style="styleObject">Binding Object Styles</div>
+        <div :style="[baseStyles, overridingStyles]">Binding Arrays Styles</div>
+    </div>
 </template>
-
-Tab
