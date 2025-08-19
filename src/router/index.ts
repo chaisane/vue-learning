@@ -1,9 +1,6 @@
 
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '@/components/Home.vue'
-import ReactivityFundamentals from '@/components/ReactivityFundamentals.vue'
-import ComputedProperties from '@/components/ComputedProperties.vue'
-
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -23,6 +20,10 @@ const router = createRouter({
     path: '/computed-properties',
     name: 'ComputedProperties',
     component: () => import('@/components/ComputedProperties.vue')
+  }, {
+    path: '/class-and-style-bindings',
+    name: 'ClassAndStyleBindings',
+    component: () => import('@/components/ClassAndStyleBindings.vue')
   },
   ],
 })

@@ -1,6 +1,5 @@
 <script setup lang="js">
 import { RouterLink, RouterView } from 'vue-router'
-import TemplateSyntax from './components/TemplateSyntax.vue';
 </script>
 
 <template>
@@ -13,6 +12,7 @@ import TemplateSyntax from './components/TemplateSyntax.vue';
         <RouterLink to="/template-syntax">Template Syntax</RouterLink>
         <RouterLink to="/reactivity-fundamentals">Reactivity Fundamentals</RouterLink>
         <RouterLink to="/computed-properties">Computed Properties</RouterLink>
+        <RouterLink to="/class-and-style-bindings">Class and Style Bindings</RouterLink>
       </nav>
     </div>
   </header>
