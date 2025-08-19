@@ -79,14 +79,18 @@ function sellOne() {
 <template>
     <!-- Declaring Reactive State -->
     <div class="col-12 card h-100 card-body">
-        <button @click="countA++"> increment A </button> = {{ countA }}
-        <button @click="countB++"> increment B </button> = {{ countB }}
-        <button @click="increment"> increment() B </button> = {{ countB }}
+        <div class="p-3">
+            <button @click="countA++" class="btn btn-warning btn-sm ms-2"> countA++ </button> = {{ countA }}
+            <button @click="countB++" class="btn btn-success btn-sm ms-2"> countB++ </button> = {{ countB }}
+            <button @click="increment" class="btn btn-success btn-sm ms-2"> increment</button> = {{ countB }}
+        </div>
     </div>
     <!-- Deep Reactivity -->
     <div class="col-12 card h-100 card-body">
-        <button @click="manageObject">Manage Object</button>
-        <pre>{{ JSON.stringify(obj, null, 2) }}</pre>
+        <div class="p-3">
+            <button @click="manageObject" class="btn btn-primary btn-sm mt-2">Manage Object</button>
+            <pre>{{ JSON.stringify(obj, null, 2) }}</pre>
+        </div>
     </div>
     <!-- reactive() -->
     <div class="col-12 card h-100 card-body">
