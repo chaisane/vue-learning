@@ -53,8 +53,7 @@ const type = ref('A')
         </div>
     </template>
     <!-- render element ไว้เสมอ แต่สลับด้วย display: none -->
-    <div class="col-12 card h-100 card-body">
-        v-show
+    <div class="p-3">
         <h1 v-show="type === 'X'">Hello!</h1>
     </div>
 </template>
