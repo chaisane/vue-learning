@@ -15,17 +15,31 @@ function onSubmit() {
     <!-- Event Standard: click, submit, blur, keyup, input อื่นๆ -->
     <!-- Event Modifiers: ทำให้เขียน event handling ง่ายขึ้น -->
 
-    <!-- @click.stop > กัน event ไม่ให้ส่งขึ้น parent -->
+    <!-- @click.stop กัน event ไม่ให้ส่งขึ้น parent -->
     <div @click="onAlert('Parent clicked')">
         Parent Div
         <button @click="onAlert('Button clicked')">Click Me</button>
-        <button @click.stop="onAlert('Button clicked')">Click Me .stop</button>
+        <button @click.stop="onAlert('Button clicked Only')">Click Me .stop</button>
     </div>
 
-    <button @click.once="onAlert('once clicked')">Once clicked</button>
+    <!-- ชั้นที่ 1 .capture จากนอกสุด ไป ในสุด -->
+    <div @click="onAlert('Layer #1')" class="layer-grand">
+        Layer #1
 
+        <!-- ชั้นที่ 2 .self ทำงานเฉพาะคลิกตรงพื้นที่ตัวเอง -->
+        <div @click="onAlert('Layer #2')" class="layer-parent">
+            Layer #2
 
-    <!-- @submit.prevent > กัน reload หน้า -->
+            <!-- ชั้นที่ 3 .stop กัน event ไม่ให้ส่งขึ้นลำดับถัดไป -->
+            <div @click="onAlert('Layer #3')" class="layer-child">
+                Layer #3
+            </div>
+        </div>
+    </div>
+
+    <button @click.once="onAlert('Pay Now')">One Click</button>
+
+    <!-- @submit.prevent กัน reload หน้า -->
     <form @submit="onSubmit">
         <input :value="'Foo Bar'" />
         <button type="submit">Submit</button>
@@ -35,18 +49,23 @@ function onSubmit() {
         <button type="submit">Submit</button>
     </form>
 
-    <!-- ชั้นที่ 1 -->
-    <div @click="onAlert('Layer #1')" style="padding:20px; background:#ccc">
-        Grand (เทา)
 
-        <!-- ชั้นที่ 2 -->
-        <div @click.self="onAlert('Layer #2')" style="padding:20px; background:#aaa; margin-top:10px">
-            Parent (เทาเข้ม / มี .self)
 
-            <!-- ชั้นที่ 3 -->
-            <button @click.stop="onAlert('Layer #3')" style="margin-top:10px">
-                Child (มี .stop)
-            </button>
-        </div>
-    </div>
 </template>
+
+<style scoped>
+.layer-grand {
+    padding: 20px;
+    background: #aaa;
+}
+
+.layer-parent {
+    padding: 20px;
+    background: #ccc;
+}
+
+.layer-child {
+    padding: 20px;
+    background: #eee;
+}
+</style>
