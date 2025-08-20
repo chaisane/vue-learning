@@ -15,6 +15,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/class-and-style-bindings">Class and Style Bindings</RouterLink>
         <RouterLink to="/conditional-rendering">Conditional Rendering</RouterLink>
         <RouterLink to="/list-rendering">List Rendering</RouterLink>
+        <RouterLink to="/event-handling">Event Handling</RouterLink>
       </nav>
     </div>
   </header>

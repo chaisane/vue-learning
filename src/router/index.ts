@@ -32,6 +32,10 @@ const router = createRouter({
     path: '/list-rendering',
     name: 'ListRendering',
     component: () => import('@/components/ListRendering.vue')
+  }, {
+    path: '/event-handling',
+    name: 'EventHandling',
+    component: () => import('@/components/EventHandling.vue')
   },
   ],
 })

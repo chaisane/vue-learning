@@ -151,7 +151,7 @@ const sets = ref([
     <!-- Displaying Filtered/Sorted Results -->
     <div class="p-3">
         <h6>Filter EvenNumbers</h6>
-        <li v-for="(n, index) in evenNumbers">{{ n }}</li>
+        <li v-for="n in evenNumbers">{{ n }}</li>
         <div class="d-grid gap-2 d-md-block">
             <button @click="pushNumber(6)" class="btn btn-primary">push</button>&nbsp;
             <button @click="popNumber()" class="btn btn-primary">pop</button>&nbsp;
@@ -169,3 +169,23 @@ const sets = ref([
     </div>
 
 </template>
+
+<!-- 
+1. push() เพิ่ม item เข้าไปท้าย array
+    items.value.push({ message: 'new item' })
+2. pop() ลบ item สุดท้ายออก
+    items.value.pop()
+3. shift() ลบ item ตัวแรกออก
+    items.value.shift()
+4. unshift() เพิ่ม item เข้าไปที่ตำแหน่งแรก
+    items.value.unshift({ message: 'first item' })
+5. splice() ลบ/แทรก item ในตำแหน่งที่กำหนด
+    // ลบ 1 ตัวที่ index 2
+    items.value.splice(2, 1)
+    // แทรกตัวใหม่ที่ index 1
+    items.value.splice(1, 0, { message: 'inserted item' })
+6. sort() เรียงลำดับ array (เปลี่ยนค่าใน array เดิม)
+    items.value.sort((a, b) => a.message.localeCompare(b.message))
+7. reverse()
+    items.value.reverse() 
+-->

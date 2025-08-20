@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 import { reactive, ref } from 'vue'
 
 const countA = 0
@@ -39,11 +39,11 @@ const book = reactive({
     ]
 })
 
-function addReview(user, rating, comment) {
+function addReview(user: string, rating: number, comment: string) {
     book.reviews.push({ user, rating, comment })
 }
 
-function restock(amount) {
+function restock(amount: number) {
     book.stock += amount
 }
 
