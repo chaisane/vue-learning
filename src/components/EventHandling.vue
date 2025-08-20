@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
 
 function onAlert(msg: string) {
     alert(msg)
@@ -12,7 +10,7 @@ function onSubmit() {
 </script>
 
 <template>
-    <!-- Event Standard: click, submit, blur, keyup, input อื่นๆ -->
+    <!-- Event Standard: click, submit etc.-->
     <!-- Event Modifiers: ทำให้เขียน event handling ง่ายขึ้น -->
 
     <!-- @click.stop กัน event ไม่ให้ส่งขึ้น parent -->
@@ -48,7 +46,6 @@ function onSubmit() {
         <input :value="'Foo Bar.prevent'" />
         <button type="submit">Submit</button>
     </form>
-
 
 
 </template>
