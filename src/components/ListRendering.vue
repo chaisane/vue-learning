@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue';
+import { reactive, ref, computed } from 'vue';
 
 const items = ref([
     { message: 'Foo' },
@@ -24,6 +24,31 @@ const myObject = reactive({
     reviewRate: null,
     price: '500'
 })
+
+
+const numbers = ref([1, 2, 3, 4, 5])
+
+const evenNumbers = computed(() => {
+    return numbers.value.filter((n) => n % 2 === 0)
+})
+
+function pushNumber(n: number) {
+    numbers.value.push(n)
+}
+
+function popNumber() {
+    numbers.value.pop()
+}
+
+function even(numbers: number[]) {
+    return numbers.filter((number: number) => number % 2 === 0)
+}
+
+const sets = ref([
+    [1, 2, 3, 4, 5],
+    [6, 7, 8, 9, 10],
+    [11, 12, 13, 14, 15]
+])
 
 </script>
 
@@ -118,9 +143,29 @@ const myObject = reactive({
 
     <!-- v-for with a Range -->
     <div class="container p-3 text-center">
-        <span class="border border-warning border-5"  v-for="n in 10">
+        <span class="border border-warning border-5" v-for="n in 10">
             {{ n }}
         </span>
+    </div>
+
+    <!-- Displaying Filtered/Sorted Results -->
+    <div class="p-3">
+        <h6>Filter EvenNumbers</h6>
+        <li v-for="(n, index) in evenNumbers">{{ n }}</li>
+        <div class="d-grid gap-2 d-md-block">
+            <button @click="pushNumber(6)" class="btn btn-primary">push</button>&nbsp;
+            <button @click="popNumber()" class="btn btn-primary">pop</button>&nbsp;
+        </div>
+    </div>
+
+    <div class="p-3">
+        <ul v-for="(numbers, iarr) in sets">
+            <li v-for="(num, inum) in even(numbers)">
+                <b>Array:</b> {{ iarr }},
+                <b>Index:</b> {{ inum }},
+                <b>Number Even:</b> {{ num }}
+            </li>
+        </ul>
     </div>
 
 </template>
