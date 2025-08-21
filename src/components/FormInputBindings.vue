@@ -4,9 +4,7 @@ import { computed, reactive, ref } from 'vue';
 const text = ref('')
 const textarea = ref('')
 const isChecked = ref(false)
-const checkedNames = ref([])
 const picked = ref('')
-//const selected = ref([])
 
 const dogs = reactive([
     { type: 'Golden Retriever', checked: true },
@@ -28,20 +26,7 @@ const days = [
     'Sunday'
 ]
 
-
-
 const selected = ref('')
-
-const options = ref([
-    { text: 'One', value: 'A' },
-    { text: 'Two', value: 'B' },
-    { text: 'Three', value: 'C' }
-])
-
-const toggle = ref(true)
-const pick = ref('first')
-const first = ref('first')
-const second = ref('second')
 
 </script>
 <template>
