@@ -36,6 +36,10 @@ const router = createRouter({
     path: '/event-handling',
     name: 'EventHandling',
     component: () => import('@/components/EventHandling.vue')
+  }, {
+    path: '/form-input-bindings',
+    name: 'FormInputBindings',
+    component: () => import('@/components/FormInputBindings.vue')
   },
   ],
 })

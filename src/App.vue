@@ -7,7 +7,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
     <div class="wrapper">
-      <nav class="navbar navbar-expand-sm bg-light navbar-light">
+      <nav class="navbar navbar-expand-sm bg-light navbar-light flex-wrap">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/template-syntax">Template Syntax</RouterLink>
         <RouterLink to="/reactivity-fundamentals">Reactivity Fundamentals</RouterLink>
@@ -16,6 +16,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/conditional-rendering">Conditional Rendering</RouterLink>
         <RouterLink to="/list-rendering">List Rendering</RouterLink>
         <RouterLink to="/event-handling">Event Handling</RouterLink>
+        <RouterLink to="/form-input-bindings">Form Input Bindings</RouterLink>
       </nav>
     </div>
   </header>

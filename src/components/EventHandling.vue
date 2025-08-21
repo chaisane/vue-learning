@@ -58,7 +58,7 @@ const btnMsg = ref('One Click')
         </form>
         <form @submit.prevent="onSubmit">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" :value="'not reload '">
+                <input type="text" class="form-control" :value="'not reload'">
                 <button type="submit" class="btn btn-primary">Submit.prevent</button>
             </div>
         </form>
