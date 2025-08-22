@@ -48,8 +48,12 @@ const router = createRouter({
   },
   {
     path: '/template-refs',
-    name: 'Template Refs',
+    name: 'TemplateRefs',
     component: () => import('@/components/TemplateRefs.vue')
+  }, {
+    path: '/components-basics',
+    name: 'ComponentsBasics',
+    component: () => import('@/components/ComponentsBasics.vue')
   },
   ],
 })

@@ -19,6 +19,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/form-input-bindings">Form Input Bindings</RouterLink>
         <RouterLink to="/watchers">Watchers</RouterLink>
         <RouterLink to="/template-refs">Template Refs</RouterLink>
+        <RouterLink to="/components-basics">Components Basics</RouterLink>
       </nav>
     </div>
   </header>
