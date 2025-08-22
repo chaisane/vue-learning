@@ -17,6 +17,6 @@ const posts = ref([
 
         <!-- <BlogPost v-for="post in posts" :title="post.title" :no="post.no" style="background-color: aqua;" /> -->
 
-        <!-- <BlogPost v-for="post in posts" :post="post" style="background-color: aqua;" /> -->
+        <!-- <BlogPost v-for="post in posts" :post="post" style="background-color: darkcyan;" /> -->
     </div>
 </template>
