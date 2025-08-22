@@ -15,6 +15,8 @@ const posts = ref([
         <BlogPost title="Blogging with Vue" style="background-color: aquamarine;" />
         <BlogPost title="Why Vue is so fun" style="background-color: aquamarine;" />
 
-        <BlogPost v-for="post in posts" :title="post.title" style="background-color: aqua;" />
+        <!-- <BlogPost v-for="post in posts" :title="post.title" :no="post.no" style="background-color: aqua;" /> -->
+
+        <!-- <BlogPost v-for="post in posts" :post="post" style="background-color: aqua;" /> -->
     </div>
 </template>
