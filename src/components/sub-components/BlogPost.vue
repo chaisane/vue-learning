@@ -1,6 +1,6 @@
 <script setup lang="ts">
 // Passing Props
-defineProps(['title', 'topic'])
+defineProps(['title'])
 </script>
 
 <template>
