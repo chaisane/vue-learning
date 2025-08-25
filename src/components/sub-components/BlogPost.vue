@@ -27,5 +27,4 @@ defineProps(['title'])
         <!-- <button @click="$emit('enlarge-text')" >{{ title }}</button> -->
     </div>
 
-
 </template>
