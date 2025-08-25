@@ -40,13 +40,11 @@ const router = createRouter({
     path: '/form-input-bindings',
     name: 'FormInputBindings',
     component: () => import('@/components/FormInputBindings.vue')
-  },
-  {
+  }, {
     path: '/watchers',
     name: 'Watchers',
     component: () => import('@/components/Watchers.vue')
-  },
-  {
+  }, {
     path: '/template-refs',
     name: 'TemplateRefs',
     component: () => import('@/components/TemplateRefs.vue')
@@ -54,6 +52,10 @@ const router = createRouter({
     path: '/components-basics',
     name: 'ComponentsBasics',
     component: () => import('@/components/ComponentsBasics.vue')
+  }, {
+    path: '/lifecycle-hooks',
+    name: 'LifecycleHooks',
+    component: () => import('@/components/LifecycleHooks.vue')
   },
   ],
 })

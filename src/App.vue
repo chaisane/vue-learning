@@ -20,6 +20,7 @@ import { RouterLink, RouterView } from 'vue-router'
         <RouterLink to="/watchers">Watchers</RouterLink>
         <RouterLink to="/template-refs">Template Refs</RouterLink>
         <RouterLink to="/components-basics">Components Basics</RouterLink>
+        <RouterLink to="/lifecycle-hooks">Lifecycle Hooks</RouterLink>
       </nav>
     </div>
   </header>
