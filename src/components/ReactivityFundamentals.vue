@@ -77,6 +77,13 @@ function sellOne() {
 </script>
 
 <template>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Reactivity Fundamentals</h5>
+            <p class="card-text">ระบบ reactive ของ Vue เช่น ref, reactive</p>
+        </div>
+    </div>
+
     <!-- Declaring Reactive State -->
     <div class="col-12 card h-100 card-body">
         <div class="p-3">

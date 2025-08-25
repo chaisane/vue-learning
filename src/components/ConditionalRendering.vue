@@ -7,6 +7,12 @@ const type = ref('A')
 </script>
 
 <template>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Conditional Rendering</h5>
+            <p class="card-text">การแสดง/ซ่อน element ด้วย v-if, v-show</p>
+        </div>
+    </div>
     <!-- v-if,  v-else -->
     <div class="col-12 card h-100 card-body">
         <div class="p-3">

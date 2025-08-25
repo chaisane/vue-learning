@@ -38,6 +38,13 @@ const overridingStyles = ref('font-size: 30px;')
 </script>
 
 <template>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Class and Style Bindings</h5>
+            <p class="card-text">การ bind class และ style ของ element ตามเงื่อนไข</p>
+        </div>
+    </div>
+
     <!-- Binding HTML Classes -->
     <div class="col-12 card h-100 card-body">
         <div class="static" :class="{ active: isActive, 'text-danger': hasError }">Binding Class inline</div>

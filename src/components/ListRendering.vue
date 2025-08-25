@@ -53,6 +53,12 @@ const sets = ref([
 </script>
 
 <template>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">List Rendering</h5>
+            <p class="card-text">การวนลูป render รายการด้วย v-for</p>
+        </div>
+    </div>
     <!-- v-for loop array จะได้ object มาเก็บในตัวแปร item -->
     <div class="p-3">
         <h3>v-for="item in items"</h3>

@@ -30,7 +30,12 @@ const selected = ref('')
 
 </script>
 <template>
-
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Form Input Bindings</h5>
+            <p class="card-text">การ bind ค่าฟอร์มกับ state ด้วย v-model</p>
+        </div>
+    </div>
     <div class="col-12 card h-100 card-body">
         <!-- Basic Usage -->
         <div class="mb-3">

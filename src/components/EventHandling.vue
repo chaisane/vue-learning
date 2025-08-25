@@ -14,6 +14,12 @@ const btnMsg = ref('One Click')
 </script>
 
 <template>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Event Handling</h5>
+            <p class="card-text">การจัดการ event เช่น @click, @input</p>
+        </div>
+    </div>
     <!-- Event Standard: click, submit etc.-->
     <!-- Event Modifiers: ทำให้เขียน event handling ง่ายขึ้น -->
 

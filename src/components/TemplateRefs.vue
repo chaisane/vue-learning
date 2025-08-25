@@ -33,6 +33,12 @@ function scrollRandom() {
 </script>
 
 <template>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Template Refs</h5>
+            <p class="card-text">อ้างอิงถึง DOM หรือ component โดยตรงผ่าน ref</p>
+        </div>
+    </div>
     <!-- Template Refs: สำหรับ อ้างอิง DOM element หรือ child component โดยตรง -->
     <div class="row g-2 p-3">
         <div class="col-md">

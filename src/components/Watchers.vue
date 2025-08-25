@@ -40,7 +40,7 @@ const userForm = reactive({
 
 watch(userForm, (newVal) => {
     console.log('Form changed:', newVal)
-    // เauto-save localStorage
+    // auto-save localStorage
     localStorage.setItem('userForm', JSON.stringify(newVal))
 })
 
@@ -58,6 +58,12 @@ watch(todoId, async () => {
 </script>
 
 <template>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Watchers</h5>
+            <p class="card-text">เฝ้าดูค่า reactive เพื่อทำ action เมื่อเปลี่ยนแปลง</p>
+        </div>
+    </div>
     <div class="col-12 card h-100 card-body">
         <p> Ask a yes/no question:
             <input v-model="question" :disabled="loading" />

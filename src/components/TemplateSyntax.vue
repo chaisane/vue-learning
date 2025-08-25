@@ -35,6 +35,12 @@ function onAlert(ok: string) {
 </script>
 
 <template>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Template Syntax</h5>
+            <p class="card-text">ไวยากรณ์ที่ใช้ใน {{ '<template>' }} เช่น การ bind ค่า, แสดงตัวแปร</p>
+        </div>
+    </div>
     <div class="col-12 card h-100 card-body">
         <!-- Text Interpolation-->
         <span>Message: {{ msg }}</span>

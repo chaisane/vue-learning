@@ -42,6 +42,13 @@ const amountFormat = computed<string>({
 </script>
 
 <template>
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Computed Properties</h5>
+            <p class="card-text">ค่าที่คำนวณอัตโนมัติจาก state และ cache ผลลัพธ์ไว้</p>
+        </div>
+    </div>
+
     <!-- Computed Caching vs. Methods -->
     <div class="col-12 card h-100 card-body">
         <p>Has books: {{ author.books.length }}</p>
